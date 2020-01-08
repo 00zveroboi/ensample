@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public List<Vector2> BlockVertices;
-
     static private Vector3[] AllVector2To3(Vector2[] Vectors)
     {
         Vector3[] Result = new Vector3[Vectors.Length];
@@ -74,7 +72,7 @@ public class Block : MonoBehaviour
 
     static private Vector2[] GetUV(Vector3[] aPoints)
     {
-        const float TextureSize = 0.5f;
+        const float TextureSize = 1f;
         Vector2[] Result = new Vector2[aPoints.Length];
         float minX = aPoints[0].x, minY = aPoints[0].y;
         for (int I = 1; I < aPoints.Length; I++)
@@ -103,14 +101,8 @@ public class Block : MonoBehaviour
         return Mesh;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void DoShow(List<Vector2> BlockVertices)
     {
         GetComponent<MeshFilter>().mesh = GetBlockMesh(BlockVertices);
     }
-
-    void Update()
-    {
-        GetComponent<MeshFilter>().mesh = GetBlockMesh(BlockVertices);
-    } 
 }
