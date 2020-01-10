@@ -7,11 +7,11 @@ public class TextureData : MonoBehaviour
     static public List<Material> TextureMaterialItems = new List<Material>();
     static public List<string> TextureNameItems = new List<string>(new[] {
         // 0
-        "main",
+        "grass",
         // 1
-        "main",
+        "dirt",
         // 2
-        "main",
+        "stone",
 
         // last
         "null"});

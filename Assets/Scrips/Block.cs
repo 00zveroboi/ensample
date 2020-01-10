@@ -72,7 +72,7 @@ public class Block : MonoBehaviour
 
     static private Vector2[] GetUV(Vector3[] aPoints)
     {
-        const float TextureSize = 1f;
+        const float TextureSize = 0.25f;
         Vector2[] Result = new Vector2[aPoints.Length];
         float minX = aPoints[0].x, minY = aPoints[0].y;
         for (int I = 1; I < aPoints.Length; I++)
